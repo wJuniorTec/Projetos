@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar com Pesquisa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+</head>
+<body>
+    <div class="navbar show-menu">
+        <div class="header-inner-content">
+            <a href="pagina-inicial.html"> <div class="logo"> <img src="logoHibernum.jpg" alt="" >
+            <nav>
+                <ul class="menu">
+                    <li>Novidades</li>
+                    <li>Roupas</li>
+                    <li>Bazar</li>
+                    <li>Marcas</li>
+                </ul>
+            </nav>
+            <div class="nav-icon-container">
+                <img src="carrinho-carrinho.png" id="carrinho-icon" onclick="abrirModalCarrinho()"/>
+                <a href="Cadastro.html"><img src="login-de-usuario.png" /></a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <section class="carrossel">
+            <div class="carrossel-inner">
+                <input class="carrossel-open" type="radio" id="carrossel-1" name="carrossel" checked="checked" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina1.html"><img src="Fotos1 (1).webp"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-2" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina2.html"><img src="promocional.jpeg"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-3" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina3.html"><img src="Fotos1 (3).webp"></a>
+                </div>
+                <input class="carrossel-open" type="radio" id="carrossel-4" name="carrossel" hidden="" aria-hidden="true">
+                <div class="carrossel-item">
+                    <a href="pagina4.html"><img src="Fotos1 (4).webp"></a>
+                </div>
+                <label for="carrossel-3" class="carrossel-control prev control-1">‹</label>
+                <label for="carrossel-2" class="carrossel-control next control-1">›</label>
+                <label for="carrossel-1" class="carrossel-control prev control-2">‹</label>
+                <label for="carrossel-3" class="carrossel-control next control-2">›</label>
+                <label for="carrossel-2" class="carrossel-control prev control-3">‹</label>
+                <label for="carrossel-4" class="carrossel-control next control-3">›</label>
+                <label for="carrossel-3" class="carrossel-control prev control-4">‹</label>
+                <label for="carrossel-1" class="carrossel-control next control-4">›</label>
+                
+                <ol class="carrossel-indicators">
+                    <li>
+                        <label for="carrossel-1" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-2" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-3" class="carrossel-bullet">•</label>
+                    </li>
+                    <li>
+                        <label for="carrossel-4" class="carrossel-bullet">•</label>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </header>
+    <br>
+    <div class="destaques">
+        <h2 style="text-align: center;">Nossos Destaques</h2>
+        <ul>
+            <li>Lançamentos</li>
+            <li>Mais Vendidos</li>
+            <li>Ofertas</li>
+        </ul>
+    </div>
+    <br>
+    <div class="slider-container">
+        <div class="slider">
+
+            <div class="slide">
+                <img 
+                src="vestido1.png" 
+                alt="Vestido Longo Roxo."
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+
+            
+        <div>
+                <h3>Vestido Longo Roxo</h3>
+                 <p class="text-sm"> 
+                    P veste 36/38.
+                    M veste 40.
+                    G veste 42. </p>
+
+                <p>Preço: R$ 39,90</p>
+                <button onclick="adicionarAoCarrinho('Vestido Longo Roxo', 39.90)">Adicionar ao Carrinho</button>
+        </div>
+        </div>
+            <div class="slide">
+                <img 
+                src="vestido2.png" 
+                alt="Produto 2"
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+
+                <div>
+                <h3>Vestido Longo Roxo Com Bojo.</h3>
+                <p class="text-sm">P veste 36/38.
+                    M veste 40.
+                    G veste 42
+                </p>
+                <p>Preço: R$ 49,90</p>
+                <button onclick="adicionarAoCarrinho('Vestido Longo Roxo Com Bojo.', 49.90)">Adicionar ao Carrinho</button>
+            
+            </div>
+            </div>
+            <div class="slide">
+                <img 
+                src="calca2.png" 
+                alt="Produto 3"
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+
+                <div>
+                <h3>Calça Feminina Cor Preta. </h3>
+                <p class="text-sm">Possui bolso atrás.
+                    P veste 36.
+                    M veste 38/40.
+                    G veste 42.
+                    GG veste 44.</p>
+                <p>Preço: R$ 59,90</p>
+                <button onclick="adicionarAoCarrinho('Calça Feminina Cor Preta', 59.90)">Adicionar ao Carrinho</button>
+            </div>
+            </div>
+            <div class="slide">
+                <img 
+                src="calça.png" 
+                alt="Produto 4"
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+               
+                <div>
+
+                <h3>Calça Feminina Cor Preta. </h3>
+                <p class="text-sm"> Calça de Resina.
+                    Possui Dois Bolsos Atrás.
+                    P veste 36.
+                    M veste 38/40.
+                    G veste 42.
+                    GG veste 44.
+                </p>
+                <p>Preço: R$ 69,90</p>
+                <button onclick="adicionarAoCarrinho('Calça Feminina Cor Preta.', 69.90)">Adicionar ao Carrinho</button>
+            </div>
+            </div>
+
+            <div class="slide">
+                <img 
+                src="blusa3.png" 
+                alt="Produto 5"
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+                
+                <div>
+                    <h3>Moletom Masculino Sem bolsos. </h3>
+                    <p class="text-sm">Moletom Masculino Preto Sem Bolsos na frente.
+                        P 38/40.
+                        M 42.
+                        G 44</p>
+                    <div>
+                        <p>Preço: R$ 79,90</p>
+                        <button onclick="adicionarAoCarrinho('Moletom Masculino Sem bolsos', 79.90)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img 
+                src="Blusa2.png" 
+                alt="Produto 6"
+                class="w-28 h-28 rounded-md hover:scale-50 hover:-rotate-2 duration-300"/>
+                 <div>
+                
+                <h3>Moletom Masculino Com Bolsos.</h3>
+                <p class="text-sm">Moletom Masculino Preto Sem Bolsos na frente.
+                    P veste 38/40.
+                    M veste 42.
+                    G veste 44</p>
+                <p>Preço: R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Moletom Masculino Com Bolsos.', 89.90)">Adicionar ao Carrinho</button>
+            </div>
+            </div>
+            <!-- Adicione mais slides conforme necessário -->
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Modal do Carrinho -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModalCarrinho()">&times;</span>
+            <h2>Seu Carrinho</h2>
+            <div id="carrinho-items">
+                <!-- Os itens do carrinho serão exibidos aqui -->
+            </div>
+            <p>Total: R$ <span id="total-carrinho">0.00</span></p>
+            <button onclick="limparCarrinho()">Limpar Carrinho</button>
+            <button onclick="finalizarCompra()">Finalizar Alugel</button> <!-- Botão de finalizar compra -->
+        </div>
+    </div>
+<br>
+<br>
+    <div class="containertxt">
+        <div>
+            <img src="REDUZA.png" alt="Descrição da imagem 1">
+            <p><strong>REDUZA</strong></p>
+            <p>37 kgs de roupas são 
+                descartados anualmente pela
+                mulher moderna. Alugue e ajude
+                a reduzir esse número.</p>
+        </div>
+        <div>
+            <img src="REUSE.png" alt="Descrição da imagem 2">
+            <p><strong>REUSE</strong></p>
+            <p>Quando o ciclo do aluguel se encerra, 
+                nossas peças vão para projetos sociais 
+                de upcycling.</p>
+        </div>
+        <div>
+            <img src="REPENSE.png" alt="Descrição da imagem 3">
+            <p><strong>REPENSE</strong></p>
+            <p>Alugando você incentiva a moda 
+                compartilhada, a economia circular
+                e reduz os impactos ambientais.</p>
+        </div>
+    </div>
+
+    <!-- Rodape-->
+    <footer>
+        <div class="rodape">
+            <p>&copy; 2024 Hibernum - Todos os direitos reservados.</p>
+            <ul class="redes-sociais">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="script.js"></script>
+    <script src="(script.js"></script>
+    <script>
+        let slideIndex = 0;
+
+function showSlide(n) {
+    const slides = document.getElementsByClassName("slide");
+    if (n >= slides.length) {slideIndex = 0}
+    if (n < 0) {slideIndex = slides.length - 3}
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (let i = slideIndex; i < slideIndex + 3; i++) {
+        slides[i].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    showSlide(slideIndex += 3);
+}
+
+function prevSlide() {
+    showSlide(slideIndex -= 3);
+}
+
+showSlide(slideIndex);
+    </script>
+</body>
+</html>
